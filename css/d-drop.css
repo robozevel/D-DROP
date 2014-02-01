@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+    z-index: 2147483647;
+    position: absolute;
+    top: 0;
+}
+
+.panel-container {
+  height: 100%;
+  /*background: rgba(0, 0, 0, 0.1);*/
+  position: fixed;
+  top: 0;
+  left: -100px;
+  transition: left .2s;
+  padding-right: 40px;
+  box-sizing: content-box;
+}
+
+.panel-container:hover {
+  left: 0;
+}
+
+.panel {
+  height: 400px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  background: #4A6176;
+  font-family: 'Coming Soon', Arial;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  top: 10%;
+  border-radius: 0 40px 40px 0;
+  border: 3px solid #2B3949;
+  border-left: none;
+  box-shadow: rgba(255, 255, 255, 0.8) -2px 0 0 inset;
+  padding: 20px 20px 20px 10px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjEwMCIgaGVpZ2h0PSI0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBNZXRob2QgRHJhdyAtIGh0dHA6Ly9naXRodWIuY29tL2R1b3BpeGVsL01ldGhvZC1EcmF3LyAtLT4KIDxnPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cmVjdCBzdHJva2U9IiMwMDAiIHRyYW5zZm9ybT0icm90YXRlKC01NSAzMC45MDY2IDEzOS4yMzgpIiBpZD0ic3ZnXzIiIGhlaWdodD0iNDYuMzg5OTEyIiB3aWR0aD0iNDQyLjEyNDM4NSIgeT0iMTE2LjA0Mjc2MyIgeD0iLTE5MC4xNTU1NDkiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzc0OGM5YyIvPgogIDxyZWN0IHN0cm9rZT0iIzAwMCIgdHJhbnNmb3JtPSJyb3RhdGUoLTU1IDQ1LjEwMjMgMjA5LjY3NCkiIGlkPSJzdmdfNSIgaGVpZ2h0PSIyMC4wMTAwMjkiIHdpZHRoPSI0NDIuMTI0Mzg1IiB5PSIxOTkuNjY4NzIyIiB4PSItMTc1Ljk1OTkxOCIgc3Ryb2tlLXdpZHRoPSIwIiBmaWxsPSIjNzQ4YzljIi8+CiA8L2c+Cjwvc3ZnPg==);
+  background-position-y: 20px;
+}
+
+.panel span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  text-shadow:
+    -2px -2px 0 #2B3949,
+    2px -2px 0 #2B3949,
+    -2px 2px 0 #2B3949,
+    2px 2px 0 #2B3949;
+}
+
+.button:last-child {
+  font-size: 36px;
+}
+
+.button {
+  background: #34475C;
+  color: #FFF;
+  display: flex;
+  box-shadow: #2B3949 2px 2px 0;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.button:active {
+  top: 2px;
+  left: 2px;
+  box-shadow: none;
+}
+
+.dragon {
+  pointer-events: auto;
+  position: absolute;
+  cursor: move;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "D-DROP",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Dragon dropped!",
+  "homepage_url": "https://github.com/robozevel",
+  "minimum_chrome_version": "25",
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "lib/jquery/jquery.min.js",
+        "lib/shadowWrap.js",
+        "src/main.js"
+      ]
+    }
+  ],
+  "web_accessible_resources":[
+      "lib/jquery/jquery.min.map",
+      "css/*",
+      "partials/*",
+      "images/*"
+  ]
+}
